@@ -14,5 +14,5 @@ export default defineConfig({
   build: {
     outDir: 'docs'
   },
-  base: '/vue3test/'
+  base: '/usagi-airline/'
 })
