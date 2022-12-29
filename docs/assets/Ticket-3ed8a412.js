@@ -1,1 +1,0 @@
-import{e as s,u as o,o as r,c as l,b as e,t as a,g as n,F as c}from"./index-0e3bc1b8.js";const u=e("h1",null,"チケット表示",-1),d=s({__name:"Ticket",setup(p){const t=o();return(i,_)=>(r(),l(c,null,[u,e("p",null,"名前："+a(n(t).name),1),e("p",null,"住所："+a(n(t).address),1),e("p",null,"目的地："+a(n(t).destination),1)],64))}});export{d as default};
