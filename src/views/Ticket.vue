@@ -3,6 +3,7 @@ import { useTicketDataStore } from '@/stores/ticketData'
 import { jsPDF } from "jspdf";
 import "@/assets/font/Mplus1-Medium-normal-ESModule";
 import PDFObject from "pdfobject";
+import { onMounted } from 'vue';
 
 const store = useTicketDataStore();
 
@@ -13,8 +14,11 @@ doc.text('住所: ' + store.address, 10, 20);
 doc.text('目的地: ' + store.destination, 10, 30);
 const pdf = doc.output('datauristring');
 
-PDFObject.embed(pdf);
+onMounted(() => {
+    PDFObject.embed(pdf, "#pdf");
+});
 </script>
 
 <template>
+    <div id="pdf"></div>
 </template>
